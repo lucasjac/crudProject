@@ -10,12 +10,12 @@ namespace Services
     public class CountriesService : ICountriesService
     {
         // Private field
-        private readonly PersonsDbContext _db;
+        private readonly ApplicationDbContext _db;
 
         // Constructor
-        public CountriesService(PersonsDbContext personsDbContext)
+        public CountriesService(ApplicationDbContext ApplicationDbContext)
         {
-            _db = personsDbContext;
+            _db = ApplicationDbContext;
         }
 
         public async Task<CountryResponse> AddCountry(CountryAddRequest? countryAddRequest)
