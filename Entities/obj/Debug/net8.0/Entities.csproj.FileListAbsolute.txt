@@ -12,3 +12,4 @@ D:\Proyectos\Programación\.NET\Prácticas\CRUDSolution\Entities\obj\Debug\net8.
 D:\Proyectos\Programación\.NET\Prácticas\CRUDSolution\Entities\obj\Debug\net8.0\ref\Entities.dll
 D:\Proyectos\Programación\.NET\Prácticas\CRUDSolution\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
 D:\Proyectos\Programación\.NET\Prácticas\CRUDSolution\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+D:\Proyectos\Programación\.NET\Prácticas\CRUDSolution\Entities\obj\Debug\net8.0\Entities.sourcelink.json
