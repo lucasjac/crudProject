@@ -1,0 +1,12 @@
+[
+  { "CountryId": "2f8c1d8e-7c6a-4e6a-9f7b-1a2d3b4c5e01", "CountryName": "Paraguay" },
+  { "CountryId": "9b4e2f7a-6c91-4b55-ae8f-2c3d4e5f6a02", "CountryName": "Argentina" },
+  { "CountryId": "5a6c7d8e-9f01-4b23-8c4d-3e4f5a6b7c03", "CountryName": "Brasil" },
+  { "CountryId": "1c2d3e4f-5a6b-4c7d-8e9f-0a1b2c3d4e04", "CountryName": "Uruguay" },
+  { "CountryId": "7e6f5d4c-3b2a-49f8-8c7d-1e2f3a4b5c05", "CountryName": "Chile" },
+  { "CountryId": "4f3e2d1c-0b9a-48c7-9d8e-5a6b7c8d9e06", "CountryName": "Bolivia" },
+  { "CountryId": "8a9b0c1d-2e3f-4a5b-8c7d-6e5f4a3b2c07", "CountryName": "Colombia" },
+  { "CountryId": "6c5b4a3f-2e1d-49a8-9b0c-7d8e9f1a2b08", "CountryName": "Perú" },
+  { "CountryId": "0e1f2a3b-4c5d-46a7-8b9c-1d2e3f4a5b09", "CountryName": "México" },
+  { "CountryId": "3d4c5b6a-7e8f-4a9b-0c1d-2e3f4a5b6c10", "CountryName": "España" }
+]
