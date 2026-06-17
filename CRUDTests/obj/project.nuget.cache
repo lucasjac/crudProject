@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "amlxM35yEi8=",
+  "dgSpecHash": "s89ttXqqNv8=",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\Programación\\.NET\\Prácticas\\CRUDSolution\\CRUDTests\\CRUDTests.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Lucas\\.nuget\\packages\\epplus\\8.4.1\\epplus.8.4.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\epplus.interfaces\\8.4.0\\epplus.interfaces.8.4.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\fluentassertions\\8.10.0\\fluentassertions.8.10.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.aspnetcore.http\\2.3.9\\microsoft.aspnetcore.http.2.3.9.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",

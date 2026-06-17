@@ -6,7 +6,8 @@ using ServiceContracts.DTO;
 using ServiceContracts.Enums;
 using Services;
 using Xunit.Abstractions;
-using Fixture;
+using FluentAssertions;
+using AutoFixture;
 
 namespace CRUDTests
 {
@@ -47,10 +48,20 @@ namespace CRUDTests
             PersonAddRequest? personAddRequest = null;
 
             //Act
-            await Assert.ThrowsAsync<ArgumentNullException>(async() =>
+            /*await Assert.ThrowsAsync<ArgumentNullException>(async() =>
             {
                 await _personService.AddPerson(personAddRequest);
-            });
+            });*/
+
+            //await Assert.ThrowsAsync<ArgumentNullException>;
+
+            // Fluent assertion
+            Func<Task> action = async () =>
+            {
+                await _personService.AddPerson(personAddRequest);
+            };
+
+            await action.Should().ThrowAsync<ArgumentNullException>();
         }
 
         // When we supply null value as PersonName, it should throw ArgumentException
@@ -62,10 +73,18 @@ namespace CRUDTests
             PersonAddRequest? personAddRequest = _fixture.Build<PersonAddRequest>().With(temp => temp.PersonName, null as string).Create();
 
             //Act
-            await Assert.ThrowsAsync<ArgumentException>(async () =>
+            /*await Assert.ThrowsAsync<ArgumentException>(async () =>
             {
                 await _personService.AddPerson(personAddRequest);
-            });
+            });*/
+
+            // Fluent assertion
+            Func<Task> action = async () =>
+            {
+                await _personService.AddPerson(personAddRequest);
+            };
+
+            await action.Should().ThrowAsync<ArgumentNullException>();
         }
 
         // When we supply proper person details, it should insert the person into the persons list; and it should return an object of PersonResponse, wich includes with the newly generated person id
@@ -91,7 +110,10 @@ namespace CRUDTests
             List<PersonResponse> personsList = await _personService.GetAllPersons();
 
             // Assert
-            Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
+            //Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
+
+            // Fluent assertion
+            personResponseFromAdd.PersonId.Should().NotBe(Guid.Empty);
 
             Assert.Contains(personResponseFromAdd, personsList);
         }
