@@ -112,10 +112,12 @@ namespace CRUDTests
             // Assert
             //Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
 
+            //Assert.Contains(personResponseFromAdd, personsList);
+            
             // Fluent assertion
             personResponseFromAdd.PersonId.Should().NotBe(Guid.Empty);
 
-            Assert.Contains(personResponseFromAdd, personsList);
+            personsList.Should().Contain(personResponseFromAdd);
         }
 
         #endregion
@@ -133,7 +135,10 @@ namespace CRUDTests
             PersonResponse? personResponseFromGet = await _personService.GetPersonByPersonId(personId);
 
             // Assert
-            Assert.Null(personResponseFromGet);
+            //Assert.Null(personResponseFromGet);
+
+            // Fluent assertion
+            personResponseFromGet.Should().BeNull();
         }
 
         // If we supply a valid person id, it should return the valid person details as PersonResponse object
@@ -163,7 +168,10 @@ namespace CRUDTests
             PersonResponse? personResponseFromGet = await _personService.GetPersonByPersonId(personResponseFromAdd.PersonId);
 
             // Assert
-            Assert.Equal(personResponseFromAdd, personResponseFromGet);
+            //Assert.Equal(personResponseFromAdd, personResponseFromGet);
+
+            // Fluent assertion
+            personResponseFromGet.Should().Be(personResponseFromAdd);
         }
         #endregion
 
@@ -177,7 +185,10 @@ namespace CRUDTests
             List<PersonResponse> personsFromGet = await _personService.GetAllPersons();
 
             // Assert
-            Assert.Empty(personsFromGet);
+            //Assert.Empty(personsFromGet);
+
+            // Fluent assertion
+            personsFromGet.Should().BeEmpty();
         }
 
         // First, we will add few persons; and then when we call GetAllPersons(), it should return the same persons that were added
@@ -260,10 +271,13 @@ namespace CRUDTests
             }
 
             // Assert
-            foreach (PersonResponse personResponseFromAdd in personResponseListFromAdd)
+            /*foreach (PersonResponse personResponseFromAdd in personResponseListFromAdd)
             {
                 Assert.Contains(personResponseFromAdd, personsListFromGet);
-            }
+            }*/
+
+            // Fluent assertion
+            personsListFromGet.Should().BeEquivalentTo(personResponseListFromAdd);
         }
 
         #endregion
